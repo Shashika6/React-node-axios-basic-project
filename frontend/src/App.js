@@ -16,7 +16,6 @@ const App = () =>{
 
   const initialLoad = async () =>{
     try {
-      console.log(process.env);
       const result = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/users`);
       setUsers(result.data);
     }catch (err){
